@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Brush’n’Roll — ręcznie malowane murale i obrazy do wnętrz</title>
+  <meta name="description" content="Ręcznie malowane murale i obrazy na płótnie we Wrocławiu, a po uzgodnieniu — w innych miastach i krajach. Bezpłatny szkic, materiały w cenie, cała kwota przed malowaniem na jedną fakturę.">
+  <meta property="og:title" content="Brush’n’Roll — murale i obrazy do wnętrz">
+  <meta property="og:description" content="Bezpłatny szkic, materiały w cenie, kalkulator ceny online.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:image" content="img/og.jpg">
+  <meta name="theme-color" content="#F5F1EA">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Manrope:wght@400..700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="img/hero-sketch.jpg">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    document.documentElement.classList.add("js");
+    if (matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentElement.classList.add("rm");
+  </script>
+</head>
+<body>
+  <a class="skip" href="#cena" data-i18n="nav.skip">Przejdź do kalkulatora</a>
+
+  <header class="hdr" id="hdr">
+    <div class="hdr-in">
+      <a class="logo" href="#top"><img class="logo-mark" src="img/logo.svg" alt="" width="38" height="38"><span data-brand>Brush’n’Roll</span></a>
+      <nav class="nav" aria-label="Menu">
+        <a href="#cena" data-i18n="nav.price">Cennik</a>
+        <a href="#obrazy" data-i18n="nav.paintings">Obrazy</a>
+        <a href="#proces" data-i18n="nav.process">Jak pracujemy</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
+        <a href="#kontakt" data-i18n="nav.contact">Kontakt</a>
+      </nav>
+      <div class="hdr-end">
+        <div class="lang" id="lang">
+          <button class="lang-btn" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="lang-menu" data-i18n-aria="lang.label" aria-label="Język strony">
+            <span class="lang-cur">PL</span>
+            <svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+          </button>
+          <div class="lang-menu" id="lang-menu" role="menu" hidden>
+            <button type="button" role="menuitemradio" aria-checked="true" data-lang="pl">Polski</button>
+            <button type="button" role="menuitemradio" aria-checked="false" data-lang="en">English</button>
+            <button type="button" role="menuitemradio" aria-checked="false" data-lang="uk">Українська</button>
+          </div>
+        </div>
+        <a class="btn btn-sm head-cta" href="#kontakt" data-i18n="cta.short">Bezpłatny szkic</a>
+        <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="menu" data-i18n-aria="menu.open" aria-label="Otwórz menu"><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="menu" id="menu" hidden>
+    <nav class="menu-nav" aria-label="Menu">
+      <a href="#cena" data-close data-i18n="nav.price">Cennik</a>
+      <a href="#obrazy" data-close data-i18n="nav.paintings">Obrazy</a>
+      <a href="#proces" data-close data-i18n="nav.process">Jak pracujemy</a>
+      <a href="#faq" data-close data-i18n="nav.faq">FAQ</a>
+      <a href="#kontakt" data-close data-i18n="nav.contact">Kontakt</a>
+    </nav>
+    <div class="menu-lang">
+      <p data-i18n="lang.title">Język</p>
+      <div class="seg">
+        <button type="button" data-lang="pl" aria-pressed="true">PL</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        <button type="button" data-lang="uk" aria-pressed="false">UA</button>
+      </div>
+    </div>
+    <a class="btn btn-block" href="#kontakt" data-close data-i18n="cta.short">Bezpłatny szkic</a>
+  </div>
+
+  <main id="top">
+    <!-- Банер: прокрутка малює кольоровий мурал поверх олівцевого ескізу -->
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <div class="hero-stage">
+        <div class="hero-copy">
+          <p class="kicker" data-i18n="hero.eyebrow">Murale i obrazy · Wrocław</p>
+          <h1 id="hero-title" data-i18n="hero.title">Ściana, która <em>opowiada</em> Twoją historię</h1>
+          <p class="lead" data-i18n="hero.lead">Ręcznie malujemy murale w domach, kawiarniach i biurach oraz obrazy na płótnie do Twojego wnętrza. Szkic jest bezpłatny, materiały — w cenie.</p>
+          <p class="where"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span data-i18n="hero.where">Malujemy we Wrocławiu. Inne miasta i kraje — też, po uzgodnieniu.</span></p>
+          <div class="hero-ctas">
+            <a class="btn" href="#cena" data-i18n="hero.cta1">Oblicz cenę</a>
+            <a class="btn btn-ghost" href="#obrazy" data-i18n="hero.cta2">Zamów obraz</a>
+          </div>
+          <p class="hint" id="scroll-hint"><span aria-hidden="true">↓</span> <span data-i18n="hero.scroll">Przewiń, aby pomalować ścianę</span></p>
+        </div>
+
+        <figure class="art">
+          <div class="art-frame">
+            <svg id="art" viewBox="0 0 1536 1024" preserveAspectRatio="xMidYMid slice" role="img" data-i18n-aria="hero.artAria" aria-label="Wizualizacja: szkic ołówkiem zamienia się w kolorowy mural botaniczny w salonie">
+              <defs>
+                <mask id="reveal" maskUnits="userSpaceOnUse" x="0" y="0" width="1536" height="1024">
+                  <rect id="mask-full" width="1536" height="1024" fill="#fff"/>
+                  <g id="strokes" fill="none" stroke="#fff"></g>
+                </mask>
+              </defs>
+              <image href="img/hero-sketch.jpg" width="1536" height="1024"/>
+              <image href="img/hero.jpg" width="1536" height="1024" mask="url(#reveal)"/>
+            </svg>
+            <svg class="art-brush" viewBox="0 0 1536 1024" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <defs>
+                <linearGradient id="g-wood" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#9a6a42"/><stop offset=".45" stop-color="#7a4b2a"/><stop offset="1" stop-color="#4b2d18"/>
+                </linearGradient>
+                <linearGradient id="g-metal" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#8d9298"/><stop offset=".3" stop-color="#f1f2f3"/><stop offset=".55" stop-color="#b9bdc2"/><stop offset="1" stop-color="#5f646a"/>
+                </linearGradient>
+                <linearGradient id="g-hair" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0" stop-color="#d9c49c"/><stop offset=".5" stop-color="#cbb184"/><stop offset=".62" stop-color="#9c6b45"/><stop offset=".72" stop-color="#7f8e6a"/><stop offset="1" stop-color="#5f6f4f"/>
+                </linearGradient>
+                <filter id="sh" x="-40%" y="-40%" width="180%" height="180%">
+                  <feDropShadow dx="12" dy="18" stdDeviation="10" flood-color="#1d1a17" flood-opacity=".3"/>
+                </filter>
+              </defs>
+              <g id="brush" filter="url(#sh)">
+                <g id="brush-in">
+                  <path d="M-150-30C-260-27-380-23-432-15Q-456 0-432 15C-380 23-260 27-150 30Z" fill="url(#g-wood)"/>
+                  <path d="M-150-62L-96-80V80L-150 62Z" fill="url(#g-metal)"/>
+                  <path d="M-140-64V64M-131-67V67" stroke="rgba(0,0,0,.2)" stroke-width="3"/>
+                  <path d="M-96-80C-60-82-22-82 0-76V76C-22 82-60 82-96 80Z" fill="url(#g-hair)"/>
+                  <path d="M-92-56H-3M-92-28H-2M-92 0H-1M-92 28H-2M-92 56H-3" stroke="rgba(55,38,20,.22)" stroke-width="2"/>
+                </g>
+              </g>
+            </svg>
+            <span class="art-tag" data-i18n="hero.tag">Wizualizacja</span>
+          </div>
+          <figcaption class="meter">
+            <span class="meter-track"><span id="meter-fill"></span></span>
+            <span class="meter-l"><span data-i18n="hero.meter">Malowanie</span> <b id="meter-val">0%</b></span>
+            <span class="done-note" data-i18n="hero.done">Gotowe — tak może wyglądać Twoja ściana.</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Чотири обіцянки -->
+    <section class="facts" aria-labelledby="facts-title">
+      <svg class="defs" width="0" height="0" aria-hidden="true" focusable="false">
+        <filter id="rough" x="-5%" y="-150%" width="110%" height="400%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="3"/><feDisplacementMap in="SourceGraphic" scale="4"/></filter>
+        <filter id="rough-v" x="-150%" y="-5%" width="400%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="3"/><feDisplacementMap in="SourceGraphic" scale="4"/></filter>
+        <filter id="blob"><feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="3" seed="8"/><feDisplacementMap in="SourceGraphic" scale="16"/></filter>
+      </svg>
+      <div class="wrap">
+        <p class="kicker" id="facts-title" data-i18n="fact.aria">Warunki współpracy</p>
+        <ul class="bento">
+          <li class="b-tile b-sketch" data-reveal>
+            <div class="b-copy">
+              <p class="b-fig">0<small> zł</small><svg class="swash" viewBox="0 0 200 24" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M6 15C46 6 96 21 140 12s48-3 54-1"/></svg></p>
+              <h3 data-i18n="fact.1t">Szkic gratis</h3>
+              <p data-i18n="fact.1d">Projekt i wizualizacja na zdjęciu Twojej ściany — bez opłat i zobowiązań.</p>
+            </div>
+            <figure class="pin" aria-hidden="true"><img src="img/hero-sketch.jpg" alt="" width="1536" height="1024" loading="lazy" decoding="async"></figure>
+          </li>
+          <li class="b-tile b-mat" data-reveal>
+            <svg class="daubs" viewBox="0 0 200 140" aria-hidden="true">
+              <circle cx="70" cy="62" r="38" fill="#A9532F"/><circle cx="122" cy="48" r="30" fill="#D9A441"/><circle cx="142" cy="96" r="28" fill="#7E8C6A"/><circle cx="90" cy="108" r="19" fill="#3E4A5C"/><circle cx="172" cy="36" r="9" fill="#C8673F"/>
+            </svg>
+            <p class="b-fig">+0<small> zł</small></p>
+            <h3 data-i18n="fact.2t">Materiały w cenie</h3>
+            <p data-i18n="fact.2d">Farby, lakier ochronny, zabezpieczenie podłogi i mebli — wszystko po naszej stronie.</p>
+            <ul class="b-chips">
+              <li data-i18n="fact.m1">Farby</li>
+              <li data-i18n="fact.m2">Lakier</li>
+              <li data-i18n="fact.m3">Folie i taśmy</li>
+            </ul>
+          </li>
+          <li class="b-tile b-pay" data-reveal>
+            <div class="pay-cols">
+              <div class="pay-a">
+                <p class="b-fig">100<small>%</small></p>
+                <h3 data-i18n="fact.3t">Cała kwota od razu</h3>
+                <p data-i18n="fact.3d">Płacisz raz — po akceptacji szkicu, przed rozpoczęciem malowania.</p>
+              </div>
+              <div class="pay-b">
+                <p class="b-fig">1<small data-i18n="fact.4u">faktura</small></p>
+                <h3 data-i18n="fact.4t">Faktura na całą kwotę</h3>
+                <p data-i18n="fact.4d">Jedna faktura na pełną wartość — bez rat i dopłat po odbiorze.</p>
+              </div>
+            </div>
+            <div class="pay-bar" aria-hidden="true">
+              <span class="pseg a"></span><span class="pseg b"></span>
+              <span class="mk m0"><i></i><b data-i18n="fact.b0">szkic · 0 zł</b></span>
+              <span class="mk m1"><i></i><b data-i18n="fact.b1">płatność 100%</b></span>
+              <span class="mk m2"><i></i><b data-i18n="fact.b2">odbiór bez dopłat</b></span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Калькулятор -->
+    <section class="sec" id="cena" aria-labelledby="calc-title">
+      <div class="wrap">
+        <header class="sec-head" data-reveal>
+          <p class="kicker" data-i18n="calc.kicker">Kalkulator</p>
+          <h2 id="calc-title" data-i18n="calc.title">Ile kosztuje <em>mural?</em></h2>
+          <p class="sub" data-i18n="calc.sub">Wybierz poziom szczegółowości i powierzchnię — cena przeliczy się od razu. To wycena orientacyjna, ostateczną potwierdzimy po szkicu.</p>
+        </header>
+
+        <form class="calc" id="calc" novalidate>
+          <fieldset class="step" data-reveal>
+            <legend><span class="step-n">1</span><span data-i18n="calc.s1">Poziom szczegółowości</span></legend>
+            <div class="levels">
+              <label class="lvl"><input type="radio" name="level" value="simple">
+                <img src="img/lvl-simple.jpg" alt="" width="800" height="1000" loading="lazy">
+                <span class="lvl-b"><b data-i18n="lvl.simple">Prosty</b><small data-i18n="lvl.simpleD">Płaskie kolory, duże formy, czyste krawędzie.</small><span class="rate" data-rate="simple"></span></span>
+              </label>
+              <label class="lvl"><input type="radio" name="level" value="medium" checked>
+                <img src="img/lvl-medium.jpg" alt="" width="800" height="1000" loading="lazy">
+                <span class="lvl-b"><b data-i18n="lvl.medium">Ilustracyjny</b><small data-i18n="lvl.mediumD">Stylizowane motywy z cieniowaniem: rośliny, ptaki, wzory.</small><span class="rate" data-rate="medium"></span></span>
+              </label>
+              <label class="lvl"><input type="radio" name="level" value="high">
+                <img src="img/lvl-high.jpg" alt="" width="800" height="1000" loading="lazy">
+                <span class="lvl-b"><b data-i18n="lvl.high">Szczegółowy</b><small data-i18n="lvl.highD">Drobna linia, faktura i gęsty rysunek — jak rycina.</small><span class="rate" data-rate="high"></span></span>
+              </label>
+              <label class="lvl"><input type="radio" name="level" value="real">
+                <img src="img/lvl-real.jpg" alt="" width="800" height="1000" loading="lazy">
+                <span class="lvl-b"><b data-i18n="lvl.real">Realistyczny</b><small data-i18n="lvl.realD">Malarski realizm: światło, głębia, przestrzeń.</small><span class="rate" data-rate="real"></span></span>
+              </label>
+            </div>
+            <p class="small-note" data-i18n="calc.imgNote">Zdjęcia przykładów to wizualizacje poglądowe.</p>
+          </fieldset>
+
+          <div class="calc-row">
+            <fieldset class="step" data-reveal>
+              <legend><span class="step-n">2</span><span data-i18n="calc.s2">Powierzchnia ściany</span></legend>
+              <div class="area">
+                <input type="range" id="area-range" min="1" max="60" step="0.5" value="8" data-i18n-aria="calc.areaAria" aria-label="Powierzchnia w metrach kwadratowych">
+                <div class="scale" aria-hidden="true"><span>1</span><span>20</span><span>40</span><span>60 m²</span></div>
+                <div class="area-in">
+                  <label class="num"><input type="number" id="area-num" min="1" max="500" step="0.5" value="8" inputmode="decimal" data-i18n-aria="calc.areaAria" aria-label="Powierzchnia w metrach kwadratowych"><span>m²</span></label>
+                  <span class="or" data-i18n="calc.or">lub wymiary</span>
+                  <label class="dim"><span data-i18n="calc.w">szer. (m)</span><input type="number" id="w" min="0" step="0.1" inputmode="decimal" placeholder="4"></label>
+                  <span class="x" aria-hidden="true">×</span>
+                  <label class="dim"><span data-i18n="calc.h">wys. (m)</span><input type="number" id="h" min="0" step="0.1" inputmode="decimal" placeholder="2,6"></label>
+                </div>
+              </div>
+              <p class="vol-hint" id="vol-hint"></p>
+            </fieldset>
+
+            <aside class="sum" data-reveal aria-labelledby="sum-t">
+              <p class="sum-l" id="sum-t" data-i18n="calc.total">Szacunkowa cena</p>
+              <p class="total" id="total">0 zł</p>
+              <p class="formula" id="formula"></p>
+              <p class="disc" id="disc" hidden></p>
+              <p class="min-note" id="min-note" hidden></p>
+              <p class="vh" id="calc-live" aria-live="polite"></p>
+              <ol class="pay">
+                <li><span data-i18n="calc.pay0">Szkic i wizualizacja</span><b id="p0">0 zł</b></li>
+                <li><span data-i18n="calc.pay1">Płatność 100% — przed malowaniem, faktura</span><b id="p1"></b></li>
+                <li><span data-i18n="calc.pay2">Po odbiorze — bez dopłat</span><b id="p2">0 zł</b></li>
+              </ol>
+              <p class="mat" data-i18n="calc.mat">Materiały są wliczone w cenę. Rusztowanie lub podnośnik do wysokich ścian i elewacji wyceniamy osobno.</p>
+              <a class="btn btn-block" href="#kontakt" id="calc-cta" data-i18n="calc.cta">Zamów bezpłatny szkic</a>
+            </aside>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Картини в інтерʼєр -->
+    <section class="sec dark" id="obrazy" aria-labelledby="art-title">
+      <div class="wrap">
+        <header class="sec-head" data-reveal>
+          <p class="kicker" data-i18n="art.kicker">Obrazy na zamówienie</p>
+          <h2 id="art-title" data-i18n="art.title">Obraz namalowany <em>do Twojego wnętrza</em></h2>
+          <p class="sub" data-i18n="art.sub">Nie tylko ściany. Malujemy obrazy na płótnie pod konkretne miejsce — kolory, format i motyw dobieramy do Twojego pokoju.</p>
+        </header>
+
+        <div class="gallery" data-reveal>
+          <figure><img src="img/art-moths.jpg" alt="" width="800" height="1000" loading="lazy"><figcaption data-i18n="art.g1">Granat i złoto — faktura, płatki złota</figcaption></figure>
+          <figure><img src="img/art-fields.jpg" alt="" width="1400" height="933" loading="lazy"><figcaption data-i18n="art.g2">Pejzaż panoramiczny — olej</figcaption></figure>
+          <figure><img src="img/art-pop.jpg" alt="" width="800" height="1000" loading="lazy"><figcaption data-i18n="art.g3">Pop-art kwiatowy — akryl i spray</figcaption></figure>
+        </div>
+        <p class="small-note" data-i18n="art.note">Wizualizacje poglądowe — pokazują kierunek, a Twój obraz powstanie od zera.</p>
+
+        <div class="pcalc-wrap">
+          <header class="p-head" data-reveal>
+            <h3 data-i18n="art.calcT">Ile kosztuje obraz?</h3>
+            <p data-i18n="art.calcSub">Wybierz poziom szczegółowości i format płótna — cena przeliczy się od razu.</p>
+          </header>
+
+          <form class="calc pcalc" id="pcalc" novalidate>
+            <fieldset class="step" data-reveal>
+              <legend><span class="step-n">1</span><span data-i18n="calc.s1">Poziom szczegółowości</span></legend>
+              <div class="levels">
+                <label class="lvl"><input type="radio" name="plevel" value="simple">
+                  <img src="img/pnt-simple.jpg" alt="" width="1200" height="800" loading="lazy">
+                  <span class="lvl-b"><b data-i18n="lvl.simple">Prosty</b><small data-i18n="lvl.simpleD">Płaskie kolory, duże formy, czyste krawędzie.</small><span class="rate" data-prate="simple"></span></span>
+                </label>
+                <label class="lvl"><input type="radio" name="plevel" value="medium" checked>
+                  <img src="img/pnt-medium.jpg" alt="" width="1200" height="800" loading="lazy">
+                  <span class="lvl-b"><b data-i18n="lvl.medium">Ilustracyjny</b><small data-i18n="lvl.mediumD">Stylizowane motywy z cieniowaniem: rośliny, ptaki, wzory.</small><span class="rate" data-prate="medium"></span></span>
+                </label>
+                <label class="lvl"><input type="radio" name="plevel" value="high">
+                  <img src="img/pnt-high.jpg" alt="" width="1200" height="800" loading="lazy">
+                  <span class="lvl-b"><b data-i18n="lvl.high">Szczegółowy</b><small data-i18n="lvl.highD">Drobna linia, faktura i gęsty rysunek — jak rycina.</small><span class="rate" data-prate="high"></span></span>
+                </label>
+                <label class="lvl"><input type="radio" name="plevel" value="real">
+                  <img src="img/pnt-real.jpg" alt="" width="1200" height="800" loading="lazy">
+                  <span class="lvl-b"><b data-i18n="lvl.real">Realistyczny</b><small data-i18n="lvl.realD">Malarski realizm: światło, głębia, przestrzeń.</small><span class="rate" data-prate="real"></span></span>
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="calc-row">
+              <fieldset class="step" data-reveal>
+                <legend><span class="step-n">2</span><span data-i18n="pcalc.s2">Format płótna</span></legend>
+                <div class="area">
+                  <p class="p-label" data-i18n="pcalc.presets">Popularne formaty</p>
+                  <div class="sizes">
+                    <label class="chip"><input type="radio" name="psize" value="s"><i class="cv" style="--w:50;--h:70" aria-hidden="true"></i><span class="c-size" data-size="s"></span><span class="c-price" data-pprice="s"></span></label>
+                    <label class="chip"><input type="radio" name="psize" value="m" checked><i class="cv" style="--w:80;--h:100" aria-hidden="true"></i><span class="c-size" data-size="m"></span><span class="c-price" data-pprice="m"></span></label>
+                    <label class="chip"><input type="radio" name="psize" value="l"><i class="cv" style="--w:100;--h:150" aria-hidden="true"></i><span class="c-size" data-size="l"></span><span class="c-price" data-pprice="l"></span></label>
+                    <label class="chip"><input type="radio" name="psize" value="xl"><i class="cv" style="--w:120;--h:240" aria-hidden="true"></i><span class="c-size" data-size="xl"></span><span class="c-price" data-pprice="xl"></span></label>
+                  </div>
+                  <div class="area-in">
+                    <span class="or" data-i18n="pcalc.or">lub własny wymiar</span>
+                    <label class="dim"><span data-i18n="pcalc.w">szer. (cm)</span><input type="number" id="pw" min="20" max="300" step="1" inputmode="numeric" placeholder="90"></label>
+                    <span class="x" aria-hidden="true">×</span>
+                    <label class="dim"><span data-i18n="pcalc.h">wys. (cm)</span><input type="number" id="ph" min="20" max="300" step="1" inputmode="numeric" placeholder="120"></label>
+                  </div>
+                  <p class="p-size" id="pdim-txt"></p>
+                </div>
+              </fieldset>
+
+              <aside class="sum" data-reveal aria-labelledby="psum-t">
+                <p class="sum-l" id="psum-t" data-i18n="calc.total">Szacunkowa cena</p>
+                <p class="total" id="ptotal">0 zł</p>
+                <p class="formula" id="pformula"></p>
+                <p class="min-note" id="pnote" hidden></p>
+                <p class="vh" id="pcalc-live" aria-live="polite"></p>
+                <ol class="pay">
+                  <li><span data-i18n="pcalc.pay0">Wizualizacja na Twojej ścianie</span><b id="pp0">0 zł</b></li>
+                  <li><span data-i18n="calc.pay1">Płatność 100% — przed malowaniem, faktura</span><b id="pp1"></b></li>
+                  <li><span data-i18n="calc.pay2">Po odbiorze — bez dopłat</span><b id="pp2">0 zł</b></li>
+                </ol>
+                <p class="mat" data-i18n="pcalc.mat">W cenie: płótno na blejtramie, farby, lakier, dostawa i montaż we Wrocławiu.</p>
+                <a class="btn btn-block" href="#kontakt" id="art-cta" data-i18n="art.cta">Zamów obraz</a>
+              </aside>
+            </div>
+          </form>
+        </div>
+
+        <div class="order order-steps" data-reveal>
+          <h3 data-i18n="art.howT">Jak zamówić obraz</h3>
+          <ol>
+            <li><b data-i18n="art.h1t">Zdjęcie wnętrza</b><span data-i18n="art.h1d">Wyślij zdjęcie ściany i jej wymiary.</span></li>
+            <li><b data-i18n="art.h2t">Bezpłatna wizualizacja</b><span data-i18n="art.h2d">Pokażemy obraz na Twojej ścianie, zanim zaczniemy.</span></li>
+            <li><b data-i18n="art.h3t">Płatność i malowanie</b><span data-i18n="art.h3d">Obraz powstaje w 2–4 tygodnie.</span></li>
+            <li><b data-i18n="art.h4t">Dostawa i montaż</b><span data-i18n="art.h4d">We Wrocławiu przywozimy i wieszamy, do innych miast wysyłamy kurierem.</span></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- Де малюємо -->
+    <section class="sec" id="gdzie" aria-labelledby="sp-title">
+      <div class="wrap spaces">
+        <figure class="spaces-img" data-reveal>
+          <img src="img/process.jpg" alt="" width="1400" height="933" loading="lazy">
+        </figure>
+        <div data-reveal>
+          <p class="kicker" data-i18n="sp.kicker">Gdzie malujemy</p>
+          <h2 id="sp-title" data-i18n="sp.title">Każda ściana może być <em>tłem</em></h2>
+          <ul class="sp-list">
+            <li><b data-i18n="sp.home">Mieszkania i domy</b><span data-i18n="sp.homeD">Salon, sypialnia, korytarz, klatka schodowa.</span></li>
+            <li><b data-i18n="sp.kids">Pokoje dziecięce</b><span data-i18n="sp.kidsD">Bezpieczne farby bez zapachu i motywy, które rosną z dzieckiem.</span></li>
+            <li><b data-i18n="sp.cafe">Kawiarnie i restauracje</b><span data-i18n="sp.cafeD">Ściana, którą goście fotografują i udostępniają.</span></li>
+            <li><b data-i18n="sp.office">Biura</b><span data-i18n="sp.officeD">Wartości marki i spokojne strefy do pracy.</span></li>
+            <li><b data-i18n="sp.shop">Sklepy i salony</b><span data-i18n="sp.shopD">Witryny, przymierzalnie, recepcje.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Процес -->
+    <section class="sec sec-line" id="proces" aria-labelledby="proc-title">
+      <div class="wrap">
+        <header class="sec-head" data-reveal>
+          <p class="kicker" data-i18n="proc.kicker">Jak pracujemy</p>
+          <h2 id="proc-title" data-i18n="proc.title">Od rozmowy do <em>gotowej ściany</em></h2>
+        </header>
+        <div class="proc">
+          <div class="track" aria-hidden="true">
+            <svg class="h" viewBox="0 0 1000 22" preserveAspectRatio="none"><path d="M2 11C120 6 240 16 360 10s240-5 360 2 220 2 278-1"/></svg>
+            <svg class="v" viewBox="0 0 22 1000" preserveAspectRatio="none"><path d="M11 2C6 120 16 240 10 360s-5 240 2 360 2 220-1 278"/></svg>
+            <svg class="brush" viewBox="0 0 24 72"><rect x="9" y="1" width="6" height="40" rx="3" fill="#1D1A17"/><rect x="7.5" y="38" width="9" height="11" rx="1.5" fill="#B9AFA2"/><path d="M7.5 48h9c0 8-2 16-4.5 22-2.5-6-4.5-14-4.5-22z" fill="#A9532F"/></svg>
+          </div>
+          <ol class="steps">
+            <li data-reveal>
+              <span class="node"><span class="num">1</span><svg viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="M4 5h16v10H9l-5 4z"/><path pathLength="1" d="M8 10h8"/></svg></span>
+              <span class="tag">0 zł</span><h3 data-i18n="proc.1t">Rozmowa i pomiar</h3><p data-i18n="proc.1d">Opowiadasz o pomyśle, wysyłasz zdjęcie i wymiary ściany.</p>
+              <p class="paid" style="--v:0"><span data-i18n="proc.paid">zapłacono</span><b>0%</b><i></i></p>
+            </li>
+            <li data-reveal>
+              <span class="node"><span class="num">2</span><svg viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="M15 4l5 5L9 20H4v-5z"/><path pathLength="1" d="M12.5 6.5l5 5"/></svg></span>
+              <span class="tag">0 zł</span><h3 data-i18n="proc.2t">Szkic i wizualizacja</h3><p data-i18n="proc.2d">Przygotowujemy projekt na zdjęciu Twojego wnętrza. Poprawki w cenie.</p>
+              <p class="paid" style="--v:0"><span data-i18n="proc.paid">zapłacono</span><b>0%</b><i></i></p>
+            </li>
+            <li data-reveal>
+              <span class="node"><span class="num">3</span><svg viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="M3 7h18v10H3z"/><path pathLength="1" d="M14.5 12a2.5 2.5 0 1 1-5 0 2.5 2.5 0 1 1 5 0z"/><path pathLength="1" d="M6 10v4M18 10v4"/></svg></span>
+              <span class="tag">100%</span><h3 data-i18n="proc.3t">Płatność</h3><p data-i18n="proc.3d">Po akceptacji szkicu wpłacasz całą kwotę na podstawie faktury i ustalamy termin.</p>
+              <p class="paid" style="--v:1"><span data-i18n="proc.paid">zapłacono</span><b>100%</b><i></i></p>
+            </li>
+            <li data-reveal>
+              <span class="node"><span class="num">4</span><svg viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="M4 4h12v5H4z"/><path pathLength="1" d="M16 6.5h3v5h-7v3"/><path pathLength="1" d="M12 14.5V21"/></svg></span>
+              <span class="tag" data-i18n="proc.4tag">1–5 dni</span><h3 data-i18n="proc.4t">Malowanie</h3><p data-i18n="proc.4d">Zabezpieczamy wnętrze, malujemy i sprzątamy po sobie.</p>
+              <p class="paid" style="--v:1"><span data-i18n="proc.paid">zapłacono</span><b>100%</b><i></i></p>
+            </li>
+            <li data-reveal>
+              <span class="node"><span class="num">5</span><svg viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="M6 3h9l4 4v14H6z"/><path pathLength="1" d="M15 3v4h4"/><path pathLength="1" d="M9 14l2 2 4-4"/></svg></span>
+              <span class="tag" data-i18n="proc.5tag">bez dopłat</span><h3 data-i18n="proc.5t">Odbiór</h3><p data-i18n="proc.5d">Oglądasz gotową pracę i odbierasz ją — bez żadnych dopłat.</p>
+              <p class="paid" style="--v:1"><span data-i18n="proc.paid">zapłacono</span><b>100%</b><i></i></p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="sec sec-line" id="faq" aria-labelledby="faq-title">
+      <div class="wrap faq">
+        <header data-reveal>
+          <p class="kicker" data-i18n="faq.kicker">Pytania</p>
+          <h2 id="faq-title" data-i18n="faq.title">Najczęstsze <em>pytania</em></h2>
+        </header>
+        <div class="qa" data-reveal>
+          <details><summary data-i18n="faq.q1">Czy szkic naprawdę jest bezpłatny?</summary><p data-i18n="faq.a1">Tak. Szkic i wizualizacja na zdjęciu Twojej ściany nic nie kosztują i do niczego nie zobowiązują. Płacisz dopiero, gdy zdecydujesz się na malowanie.</p></details>
+          <details><summary data-i18n="faq.q2">Co jest wliczone w cenę?</summary><p data-i18n="faq.a2">Projekt, wszystkie farby i materiały, lakier ochronny, zabezpieczenie podłogi i mebli, malowanie oraz sprzątanie po pracy.</p></details>
+          <details><summary data-i18n="faq.q3">Jak wygląda płatność?</summary><p data-i18n="faq.a3">Całą kwotę płacisz od razu — po akceptacji szkicu, przed rozpoczęciem malowania. Wystawiamy jedną fakturę na pełną wartość, bez dopłat po zakończeniu.</p></details>
+          <details><summary data-i18n="faq.q4">Od czego zależy cena?</summary><p data-i18n="faq.a4">Od powierzchni i poziomu szczegółowości. Prosta grafika maluje się szybciej niż realistyczny pejzaż. Im większa ściana, tym niższa cena za m² — rabat dochodzi do 30%. Kalkulator pokazuje cenę orientacyjną, dokładną podajemy po szkicu.</p></details>
+          <details><summary data-i18n="faq.q5">Ile trwa malowanie?</summary><p data-i18n="faq.a5">Zwykle od 1 do 5 dni na miejscu, zależnie od wielkości i szczegółowości. Obraz na płótnie — 2–4 tygodnie.</p></details>
+          <details><summary data-i18n="faq.q6">Czy mural da się umyć?</summary><p data-i18n="faq.a6">Tak. Pokrywamy go lakierem ochronnym, więc ścianę można delikatnie przecierać wilgotną ściereczką.</p></details>
+          <details><summary data-i18n="faq.q7">Czy obraz może mieć nietypowy format?</summary><p data-i18n="faq.a7">Tak. Formaty w cenniku to punkt wyjścia — namalujemy obraz w dowolnym rozmiarze pod Twoją ścianę.</p></details>
+          <details><summary data-i18n="faq.q8">Jak dostarczacie obraz?</summary><p data-i18n="faq.a8">We Wrocławiu przywozimy i wieszamy obraz sami. Do innych miast wysyłamy kurierem w bezpiecznym opakowaniu.</p></details>
+          <details><summary data-i18n="faq.q9">Czy malujecie poza Wrocławiem?</summary><p data-i18n="faq.a9">Tak. Na co dzień malujemy we Wrocławiu, a inne miasta i kraje bierzemy po uzgodnieniu — dojazd i termin ustalamy indywidualnie.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Контакт -->
+    <section class="sec contact" id="kontakt" aria-labelledby="ct-title">
+      <div class="wrap contact-in">
+        <div data-reveal>
+          <p class="kicker" data-i18n="contact.kicker">Kontakt</p>
+          <h2 id="ct-title" data-i18n="contact.title">Opowiedz o swojej <em>ścianie</em></h2>
+          <p class="sub" data-i18n="contact.sub">Wyślij zdjęcie i wymiary — odpiszemy z pomysłem i terminem bezpłatnego szkicu.</p>
+          <ul class="clist">
+            <li id="c-email"><span data-i18n="contact.email">E-mail</span><a data-cfg="email" href="#"></a></li>
+            <li id="c-phone" hidden><span data-i18n="contact.phone">Telefon</span><a data-cfg="phone" href="#"></a></li>
+            <li id="c-ig" hidden><span>Instagram</span><a data-cfg="instagram" href="#" rel="noopener"></a></li>
+            <li><span data-i18n="contact.city">Miasto</span><b data-i18n="contact.cityV">Wrocław · inne miasta i kraje po uzgodnieniu</b></li>
+          </ul>
+        </div>
+
+        <form class="form" id="form" novalidate data-reveal>
+          <fieldset class="kind">
+            <legend data-i18n="form.kind">Co chcesz zamówić?</legend>
+            <label><input type="radio" name="kind" value="mural" checked><span data-i18n="form.kMural">Mural na ścianie</span></label>
+            <label><input type="radio" name="kind" value="painting"><span data-i18n="form.kPaint">Obraz na płótnie</span></label>
+          </fieldset>
+          <label class="fld"><span data-i18n="form.name">Imię</span><input name="name" autocomplete="name" required></label>
+          <label class="fld"><span data-i18n="form.contact">Telefon lub e-mail</span><input name="contact" autocomplete="email" required></label>
+          <label class="fld"><span data-i18n="form.place">Miejsce</span><input name="place" data-i18n-ph="form.placePh" placeholder="np. pokój dziecięcy, 3 × 2,6 m"></label>
+          <label class="fld"><span data-i18n="form.msg">Pomysł</span><textarea name="msg" rows="4" data-i18n-ph="form.msgPh" placeholder="Co chcesz zobaczyć? Kolory, motywy, nastrój."></textarea></label>
+          <label class="check"><input type="checkbox" id="f-quote"><span data-i18n="form.quote">Dołącz wycenę ze strony</span></label>
+          <p class="quote-prev" id="quote-prev" hidden></p>
+          <button class="btn btn-block" type="submit" data-i18n="form.send">Wyślij zapytanie</button>
+          <p class="form-hint" data-i18n="form.hint">Otworzy się Twoja poczta z gotową wiadomością.</p>
+          <p class="form-status" id="form-status" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="ftr">
+    <div class="wrap ftr-in">
+      <p class="ftr-big"><img class="ftr-mark" src="img/logo.svg" alt="" width="96" height="96"><span data-brand>Brush’n’Roll</span></p>
+      <div class="seg seg-dark" role="group" data-i18n-aria="lang.label" aria-label="Język strony">
+        <button type="button" data-lang="pl" aria-pressed="true">PL</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        <button type="button" data-lang="uk" aria-pressed="false">UA</button>
+      </div>
+      <p class="ftr-legal" data-i18n="footer.legal">Ceny w kalkulatorze są orientacyjne. Zdjęcia na stronie to wizualizacje poglądowe.</p>
+      <p class="ftr-copy">© <span id="yr"></span> <span data-brand>Brush’n’Roll</span></p>
+    </div>
+  </footer>
+
+  <script src="i18n.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
